@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="contenedor">
+        <input type="text" id="nombreProducto" placeholder="nombre del producto">    <!--los 3 inputs-->
+        <input type="number"  id="precioProducto" placeholder="precio del producto">
+        <input type="text" id="nombreMercado" placeholder="nombre del mercado">
+        <br>
+        <button id="guardar">Guardar descripcion</button>
+        <button id="lista">Lista de productos</button>
+        <button id="listabarata">Productos mas baratos</button>
+        <div id="mensajes">
+            <h1>lista de productos</h1>
+            <ul id="p1"></ul>   <!--sirve para mostrar las lista con los nombre y el precio, lo malo es que se muestran alado del otro con ","-->
+            <h1>lista de precios menores</h1>
+        </div>
+    </div>
+
     <script src="/src/index.js"></script>
 </body>
 </html>
