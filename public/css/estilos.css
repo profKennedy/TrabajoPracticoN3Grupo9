@@ -32,6 +32,20 @@
     justify-content: center;
     align-items: center;*/
 }
+#mensajes h1{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+input{
+    color: black;
+    font-size: 15px;
+    position: relative;
+    margin: 20px 0;
+    font-family: bold;
+    border-bottom: 5px solid white ;
+    border-radius: 7px;
+}
 
 /**#contenedor{
     flex-direction: column;   
