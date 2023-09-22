@@ -1,29 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <title>Document</title>
-</head>
-<body>
-    <section class="form">
-    <div id="contenedor">
-        <input type="text" id="nombreProducto" placeholder="nombre del producto">    <!--los 3 inputs-->
-        <input type="number"  id="precioProducto" placeholder="precio del producto">
-        <input type="text" id="nombreMercado" placeholder="nombre del mercado">
-        <br>
-        <button id="guardar">Guardar descripcion</button>
-        <button id="lista">Lista de productos</button>
-        <button id="listabarata">Productos mas baratos</button>
-        <div id="mensajes">
-            <h1>lista de productos</h1>
-            <ul id="p1"></ul>   <!--sirve para mostrar las lista con los nombre y el precio, lo malo es que se muestran alado del otro con ","-->
-            <h1>lista de precios menores</h1>
-        </div>
-    </div>
-    </section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Don Ahorro</title>
+        <link rel="stylesheet" type="text/css" href="./css/estilos.css">
+    </head>
+    <body>
+        <section class="form">
+            
+            <form id="formProducto">
+                <h1>Comparador de precios</h1>
+                <input type="text" id="nombre" placeholder="Nombre del producto"/>
+                <input type="number" id="precio" min="0" step="0.01" placeholder="Precio del producto"/>
+                <select name="comercio" id="comercio">
+                    <option value="">Nombre del comercio</option>
+                    <option value="Comodin">Comodín</option>
+                    <option value="Carrefour">Carrefour</option>
+                    <option value="Vea">Vea</option>
+                    <option value="Chango Mas">Chango Más</option>
+                </select>  <br/>
+                <button type="button" id="botonGuardar">Guardar Producto</button>
+                <button type="button" id="botonListar">Listar Productos</button>
+                <button type="button" id="botonBaratos"  >Productos Más Baratos</button>
+            
+                
+                <div id="mensajes">
+                    <table id="tablaProductos">
+                        <thead>
+                            <h2>Listado de Productos</h2>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Comercio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaProductos">
+                        </tbody>
+                    </table>
+        
+                    <table id="tablaProductos">
+                        <thead>
+                            <h2>Productos con Menor Precio</h2>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Comercio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productosBaratos">
+                        </tbody>
+                    </table>
+                </div>
 
-    <script src="/src/index.js"></script>
-</body>
+            </form>
+            
+        </section>
+        
+        <script src="../src/index.js"></script>
+    </body>
 </html>
